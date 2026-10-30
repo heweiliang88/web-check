@@ -1,18 +1,9 @@
 {
   "version": 2,
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1.js"
-    }
-  ],
   "functions": {
-    "api/trackers.js": {
+    "api/[...path].js": {
       "maxDuration": 45,
       "includeFiles": "node_modules/@ghostery/trackerdb/dist/trackerdb.engine"
-    },
-    "api/*.js": {
-      "maxDuration": 45
     }
   },
   "env": {
